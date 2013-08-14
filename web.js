@@ -4,9 +4,7 @@ app.use(express.logger());
 
 var fs = require('fs');
 
-var datos = fs.readFile('index.html', function(err, data){
-	data.toString();
-});
+var datos = fs.readFileSync('index.html', 'utf8');
 
 app.get('/', function(request, response) {
   response.send(datos);
