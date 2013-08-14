@@ -7,10 +7,12 @@ app.use(express.logger());
   response.send('Hello World 2!');
 });*/
 
-//var datos = fs.readFileSync('index.html', 'utf8');
+var datos = fs.readFile('index.html', function(err, data){
+	data.toString();
+});
 
 app.get('/', function(request, response) {
-  response.send('Hola');
+  response.send(datos);
 });
 
 var port = process.env.PORT || 5000;
