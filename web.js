@@ -2,10 +2,7 @@ var express = require('express');
 var app = express();
 app.use(express.logger());
 
-
-/*app.get('/', function(request, response) {
-  response.send('Hello World 2!');
-});*/
+var fs = require('fs');
 
 var datos = fs.readFile('index.html', function(err, data){
 	data.toString();
