@@ -7,7 +7,7 @@ app.use(express.logger());
   response.send('Hello World 2!');
 });*/
 
-//var datos = fs.readFileSync('index.html');
+var datos = fs.readFileSync('index.html', 'utf8');
 
 app.get('/', function(request, response) {
   response.send('Hola');
